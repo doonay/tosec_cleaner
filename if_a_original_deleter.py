@@ -20,12 +20,12 @@ if __name__ == "__main__":
 
     for f in list_files:
     #если присутствует [a]-ром, удаляем оригинал
-        if (f.find('[a]')!=-1):
+        if (f.rfind('[a]')!=-1):
             list_of_a.append(f)
 
     index = 0
     for i in list_of_a:
-        index = i.find('[a]')
+        index = i.rfind('[a]')
         #print(i[0:index] + i[index+3:len(i)])
         for j in list_files:
             if (i[0:index] + i[index+3:len(i)]) == j:
